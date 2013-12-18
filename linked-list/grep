@@ -1,0 +1,7 @@
+********* Starting tests
+
+	test_should_insert_node_into_middle_of_list_and_return_true
+
+------------
+111------------
+********* Ran 1 tests passed 1 failed 0

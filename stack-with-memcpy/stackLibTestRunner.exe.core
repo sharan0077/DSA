@@ -1,0 +1,22 @@
+[main] stackLibTestRunner 1000 (0) exception: trapped!
+[main] stackLibTestRunner 1000 (0) exception: code 0xC0000005 at 0x61053592
+[main] stackLibTestRunner 1000 (0) exception: ax 0x6172616E bx 0x61062698 cx 0x244FCA4 dx 0x231273C8
+[main] stackLibTestRunner 1000 (0) exception: si 0x231273C8 di 0x0 bp 0x244FC7C sp 0x244FC74
+[main] stackLibTestRunner 1000 (0) exception: exception is: STATUS_ACCESS_VIOLATION
+[main] stackLibTestRunner 1000 (0) stack: Stack trace:
+[main] stackLibTestRunner 1000 (0) stack: frame 0: sp = 0x244F814, pc = 0x6100A2C3
+[main] stackLibTestRunner 1000 (0) stack: frame 1: sp = 0x244F850, pc = 0x77C9B499
+[main] stackLibTestRunner 1000 (0) stack: frame 2: sp = 0x244F874, pc = 0x77C9B46B
+[main] stackLibTestRunner 1000 (0) stack: frame 3: sp = 0x244F924, pc = 0x77C50133
+[main] stackLibTestRunner 1000 (0) stack: frame 4: sp = 0x244FC7C, pc = 0x402109
+[main] stackLibTestRunner 1000 (0) stack: frame 5: sp = 0x244FC94, pc = 0x401FDF
+[main] stackLibTestRunner 1000 (0) stack: frame 6: sp = 0x244FDB4, pc = 0x40125E
+[main] stackLibTestRunner 1000 (0) stack: frame 7: sp = 0x244FDBC, pc = 0x61004402
+[main] stackLibTestRunner 1000 (0) stack: frame 8: sp = 0x244FF50, pc = 0x61004420
+[main] stackLibTestRunner 1000 (0) stack: frame 9: sp = 0x244FF5C, pc = 0x4022DE
+[main] stackLibTestRunner 1000 (0) stack: frame 10: sp = 0x244FF6C, pc = 0x40103A
+[main] stackLibTestRunner 1000 (0) stack: frame 11: sp = 0x244FF88, pc = 0x7583336A
+[main] stackLibTestRunner 1000 (0) stack: frame 12: sp = 0x244FF94, pc = 0x77C79F72
+[main] stackLibTestRunner 1000 (0) stack: frame 13: sp = 0x244FFD4, pc = 0x77C79F45
+[main] stackLibTestRunner 1000 (0) stack: frame 14: sp = 0x244FFEC, pc = 0x0
+[main] stackLibTestRunner 1000 (0) stack: End of stack trace

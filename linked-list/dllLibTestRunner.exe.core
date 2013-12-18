@@ -1,0 +1,21 @@
+[main] dllLibTestRunner 1000 (0) exception: trapped!
+[main] dllLibTestRunner 1000 (0) exception: code 0xC0000005 at 0x4025C4
+[main] dllLibTestRunner 1000 (0) exception: ax 0x0 bx 0x245FDD0 cx 0xA031CE8 dx 0x0
+[main] dllLibTestRunner 1000 (0) exception: si 0x0 di 0x0 bp 0x245FD88 sp 0x245FD78
+[main] dllLibTestRunner 1000 (0) exception: exception is: STATUS_ACCESS_VIOLATION
+[main] dllLibTestRunner 1000 (0) stack: Stack trace:
+[main] dllLibTestRunner 1000 (0) stack: frame 0: sp = 0x245F918, pc = 0x6100A2C3
+[main] dllLibTestRunner 1000 (0) stack: frame 1: sp = 0x245F954, pc = 0x7784B499
+[main] dllLibTestRunner 1000 (0) stack: frame 2: sp = 0x245F978, pc = 0x7784B46B
+[main] dllLibTestRunner 1000 (0) stack: frame 3: sp = 0x245FA28, pc = 0x77800133
+[main] dllLibTestRunner 1000 (0) stack: frame 4: sp = 0x245FD88, pc = 0x40213A
+[main] dllLibTestRunner 1000 (0) stack: frame 5: sp = 0x245FDA8, pc = 0x401741
+[main] dllLibTestRunner 1000 (0) stack: frame 6: sp = 0x245FDB0, pc = 0x61004402
+[main] dllLibTestRunner 1000 (0) stack: frame 7: sp = 0x245FF50, pc = 0x61004420
+[main] dllLibTestRunner 1000 (0) stack: frame 8: sp = 0x245FF5C, pc = 0x40271E
+[main] dllLibTestRunner 1000 (0) stack: frame 9: sp = 0x245FF6C, pc = 0x40103A
+[main] dllLibTestRunner 1000 (0) stack: frame 10: sp = 0x245FF88, pc = 0x7537336A
+[main] dllLibTestRunner 1000 (0) stack: frame 11: sp = 0x245FF94, pc = 0x77829F72
+[main] dllLibTestRunner 1000 (0) stack: frame 12: sp = 0x245FFD4, pc = 0x77829F45
+[main] dllLibTestRunner 1000 (0) stack: frame 13: sp = 0x245FFEC, pc = 0x0
+[main] dllLibTestRunner 1000 (0) stack: End of stack trace
