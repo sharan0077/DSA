@@ -40,19 +40,19 @@ int main(){
 	resetTestCount();
 
 	setup();
-		test_should_should_allocate_and_initialize_memory_to_zero_for_stack_of_typeInt();
+		test_should_create_and_initialize_memory_to_zero_for_stack_of_typeInt();
 	tearDown();
 
 	setup();
-		test_should_should_allocate_and_initialize_memory_to_zero_for_stack_of_typeChar();
+		test_should_create_and_initialize_memory_to_zero_for_stack_of_typeChar();
 	tearDown();
 
 	setup();
-		test_should_should_allocate_and_initialize_memory_to_zero_for_stack_of_typeDouble();
+		test_should_create_and_initialize_memory_to_zero_for_stack_of_typeDouble();
 	tearDown();
 
 	setup();
-		test_should_allocate_and_initialize_memory_to_zero_for_stack_of_typeString();
+		test_should_create_stack_of_typeString();
 	tearDown();
 
 	setup();

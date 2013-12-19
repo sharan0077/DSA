@@ -54,9 +54,24 @@ int main(){
 		test_should_create_and_push_an_element_into_stack();
 	tearDown();
 	testEnded();
+	testStarted("test_should_return_true_after_pushing_multiple_elements_into_stack");
+	setup();
+		test_should_return_true_after_pushing_multiple_elements_into_stack();
+	tearDown();
+	testEnded();
 	testStarted("test_should_pop_an_element_from_the_queue_and_return_true");
 	setup();
 		test_should_pop_an_element_from_the_queue_and_return_true();
+	tearDown();
+	testEnded();
+	testStarted("test_should_pop_an_element_when_there_are_multiple_elements_in_the_queue");
+	setup();
+		test_should_pop_an_element_when_there_are_multiple_elements_in_the_queue();
+	tearDown();
+	testEnded();
+	testStarted("test_pop_should_return_false_when_que_is_empty");
+	setup();
+		test_pop_should_return_false_when_que_is_empty();
 	tearDown();
 	testEnded();
 

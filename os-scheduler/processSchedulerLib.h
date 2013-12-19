@@ -1,7 +1,7 @@
 #include "../priorityQueue/priorityQueueLib.h"
 typedef struct{
-	int priority;
 	int Time;
-	int data;
+	String processName;
 }Process;
+
 int processScheduler(List *queue);
