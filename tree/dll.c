@@ -108,8 +108,8 @@ int isEmpty(List* start){
 
 int hasnext(Iterator* it){
 	Node* temp = ((List*)it->list)->head;
-	int count;
-	for(count = 0; count < (it->position+1); count++){
+	int i;
+	for(i = 0; i < (it->position+1); i++){
 		temp = temp->next;
 	}
 	if(temp != NULL)
@@ -119,9 +119,9 @@ int hasnext(Iterator* it){
 
 void* next(Iterator* it){
 	Node* temp = ((List*)it->list)->head;
-	int count;
+	int i;
 	++it->position;
-	for(count = 0 ; count < it->position ; count++ ){
+	for(i = 0 ; i < it->position ; i++ ){
 		temp = temp->next;
 	}
 	return temp->data;

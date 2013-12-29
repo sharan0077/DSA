@@ -6,3 +6,4 @@ typedef struct{
 }Tree;
 Tree createTree(compare cmp);
 int insertNode(Tree* tree,void* parent,void* data);
+Iterator getChildren(Tree* tree, void* data);
