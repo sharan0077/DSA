@@ -49,16 +49,6 @@ int main(){
 	fixtureSetup();
 	resetTestCount();
 
-	testStarted("test_should_create_tree_and_insert_root_node_and_return_true");
-	setup();
-		test_should_create_tree_and_insert_root_node_and_return_true();
-	tearDown();
-	testEnded();
-	testStarted("test_should_insert_node_when_root_already_present");
-	setup();
-		test_should_insert_node_when_root_already_present();
-	tearDown();
-	testEnded();
 
 	summarizeTestCount();
 	fixtureTearDown();
