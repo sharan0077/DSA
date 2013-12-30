@@ -84,6 +84,11 @@ int main(){
 		test_to_insert_child_of_child_of_root();
 	tearDown();
 	testEnded();
+	testStarted("test_should_delete_element_and_return_true");
+	setup();
+		test_should_delete_element_and_return_true();
+	tearDown();
+	testEnded();
 
 	summarizeTestCount();
 	fixtureTearDown();

@@ -32,8 +32,6 @@ TreeNode* traverse(List* list,void* data,compare cmp){
 	}
 	return NULL;
 }
-
-
 int insertChild(TreeNode* node,TreeNode* treenode,void* data){
 	node->data = data;
 	node->children = create();
@@ -66,11 +64,32 @@ Iterator getChildren(Tree* tree, void* data){
 	it.next = getChildrenData;
 	return  it;
 }
-
 int search(Tree* tree, void* data){
 	TreeNode* treenode;
 	treenode = traverse((List*)tree->root, data, tree->compareFunc);
 	if(!treenode) return 0;
 	return 1;
 }
+int getIndex(Tree* tree,TreeNode* treenode,void* data){
+	int index = 0;
+	Iterator it = getIterator(treenode->children);
+	void* dataInNode;
+	while(it.hasNext(&it)){
+		dataInNode = ((TreeNode*)it.next(&it))->data;
+		if(tree->compareFunc(dataInNode,data))
+			return index;
+		index++;
+	}
+	return -1;
+}
 
+int deleteNode(Tree* tree,void* data){
+	TreeNode* treenode;
+	int index;
+	treenode = traverse((List*)tree->root, data,tree->compareFunc);
+	if(treenode == NULL || treenode->children->head != NULL)
+		return 0;
+	index = getIndex(tree,treenode->parent,data);
+	remove(((TreeNode*)(treenode->parent))->children,index);
+	return 1;
+}

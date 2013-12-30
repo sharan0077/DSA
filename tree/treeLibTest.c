@@ -82,8 +82,7 @@ void test_to_insert_child_of_child_of_root(){
 	Tree tree;
 	Iterator it;
 	tree = createTree(areEqual);
-	result = insertNode(&tree, NULL, &arr[0]);
-	ASSERT(result);
+	insertNode(&tree, NULL, &arr[0]);
 	insertNode(&tree, &arr[0], &arr[1]);
 	insertNode(&tree, &arr[0], &arr[2]);
 	insertNode(&tree, &arr[0], &arr[3]);
@@ -95,3 +94,17 @@ void test_to_insert_child_of_child_of_root(){
 		count++;
 	}
 }
+void test_should_delete_element_and_return_true(){
+	int arr[] = {1,2,3};
+	int result;
+	Tree tree;
+	Iterator it;
+	tree = createTree(areEqual);
+	insertNode(&tree,NULL,&arr[0]);
+	insertNode(&tree, &arr[0], &arr[1]);
+	insertNode(&tree, &arr[1], &arr[2]);
+	result = deleteNode(&tree,&arr[2]);
+	ASSERT(result);
+}
+
+
