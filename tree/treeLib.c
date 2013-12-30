@@ -14,36 +14,42 @@ Tree createTree(compare cmp){
 }
 int insertAsRoot(Tree* tree,TreeNode* node,void* data){
 	node->data = data;
-	node->children = NULL;
-	node->parent = NULL;
+	node->children = create();
+ 	node->parent = NULL;
 	tree->root = create();
 	insert((List*)tree->root, 0,node);	
 	return 1;
 }
-TreeNode* traverse(Tree* tree,void* data){
-	void* temp = ((TreeNode*)(((List*)tree->root)->head->data))->data;
-	if(tree->compareFunc(temp, data))
-		return ((List*)(tree->root))->head->data;
+TreeNode* traverse(List* list,void* data,compare cmp){
+	TreeNode* temp;
+	Iterator it = getIterator(list);
+	while(it.hasNext(&it)){
+		temp = it.next(&it);
+		if(cmp(temp->data,data))
+			return temp;
+		if(temp->children->head != NULL)
+			return traverse(temp->children, data, cmp);
+	}
 	return NULL;
 }
+
+
 int insertChild(TreeNode* node,TreeNode* treenode,void* data){
 	node->data = data;
-	node->children = NULL;
+	node->children = create();
 	node->parent = treenode;
-	treenode->children = create();
 	insert(treenode->children, 0, node);
 	return 1;
 }
-int insertNode(Tree* tree,void* parent,void* data){
+int insertNode(Tree* tree,void* parentData,void* data){
 	TreeNode* treenode;
 	TreeNode* node = malloc(sizeof(TreeNode));
-	if(parent == NULL)
+	if(parentData == NULL)
 		return insertAsRoot(tree,node,data);
-	treenode = traverse(tree, data);
+	treenode = traverse((List*)tree->root, parentData,tree->compareFunc);
 	return insertChild(node,treenode,data);
 	return 0;
 }
-
 void* getChildrenData(Iterator* it){
 	TreeNode* node;
 	Iterator treeIterator = getIterator(it->list);
@@ -52,11 +58,19 @@ void* getChildrenData(Iterator* it){
 	it->position++;
 	return node->data;
 }
-
-
 Iterator getChildren(Tree* tree, void* data){
 	Iterator it;
-	it = getIterator((List*)tree->root);
+	TreeNode* treenode ;
+	treenode = traverse((List*)tree->root, data, tree->compareFunc);
+	it = getIterator(treenode->children);
 	it.next = getChildrenData;
 	return  it;
 }
+
+int search(Tree* tree, void* data){
+	TreeNode* treenode;
+	treenode = traverse((List*)tree->root, data, tree->compareFunc);
+	if(!treenode) return 0;
+	return 1;
+}
+

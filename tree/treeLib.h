@@ -7,3 +7,4 @@ typedef struct{
 Tree createTree(compare cmp);
 int insertNode(Tree* tree,void* parent,void* data);
 Iterator getChildren(Tree* tree, void* data);
+int search(Tree* tree,void* data);
